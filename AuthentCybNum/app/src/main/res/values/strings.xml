@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AuthentCybNum</string>
+    <string name="hint_login">Saisissez votre login</string>
+    <string name="hint_pwd">Saisissez votre mot de passe</string>
+    <string name="valider">Valider</string>
+    <string name="effacer">Effacer</string>
+    <string name="fermer">Fermer</string>
+    <string name="loginok">toto</string>
+    <string name="pwdok">titi</string>
+    <string name="bienvenu">Bienvenue</string>
+    <string name="alarme">Alarme</string>
+    <string name="appel">Appel</string>
+    <string name="esaip">ESAIP</string>
+    <string name="musique">Musique</string>
+    <string name="video">Video</string>
+</resources>
