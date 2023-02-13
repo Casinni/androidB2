@@ -1,14 +1,19 @@
 package vannes.lamy.authentcybnum;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Accueil extends AppCompatActivity {
 TextView bienvenu;
@@ -23,6 +28,30 @@ TextView bienvenu;
         bienvenu=findViewById(R.id.bienvenue);
         Log.e("bienvenu",getResources().getString(R.string.bienvenu));
         bienvenu.setText(getResources().getString(R.string.bienvenu)+ " "+ login);
+        //demande la permission de téléphoner à l'utilisateur
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CALL_PHONE},1);
+        }
+    }
+    //on vérifié si la permission a été autorisée
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case 1: {
+                if (grantResults.length > 0
+                        && grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getApplicationContext(), "permission acceptée", Toast.LENGTH_SHORT).show();
+                } else {
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{Manifest.permission.CALL_PHONE}, 1);
+                }
+                return;
+            }
+        }
     }
     public void alarme(View v){
         Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
