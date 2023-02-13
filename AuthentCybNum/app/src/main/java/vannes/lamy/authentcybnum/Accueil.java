@@ -48,9 +48,14 @@ TextView bienvenu;
         startActivity(i);
     }
     public void musique(View v){
-
+    Intent i =new Intent(Accueil.this, Musique.class);
+    startActivity(i);
     }
     public void video(View v){
-
+        Intent i =new Intent(Accueil.this, Video.class);
+        startActivity(i);
+    }
+    public void fermer(View v){
+        finish();
     }
 }

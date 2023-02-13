@@ -13,4 +13,6 @@
     <string name="esaip">ESAIP</string>
     <string name="musique">Musique</string>
     <string name="video">Video</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
 </resources>
