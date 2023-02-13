@@ -1,5 +1,5 @@
 # androidB2
-AuthencyNum est une application permettant de découvrir:
+AuthentCybNum est une application permettant de découvrir:
 - le focntionnement des Activitys
 - le fonctionnement des intents
 - les widgets VideoView, WebView, constraintlayout, button, imageview, textview
