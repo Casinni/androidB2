@@ -12,6 +12,6 @@ LifeCycle est une application permettant de découvrir le fonctionnement du cycl
 - utilisation et Log des méthodes OnSaveRestoreState, et OnRestoreinstanceState
 - Log des méthodes: onStop(),onRestart(),onResume(),onDestroy(),onPause(),onCreate()
 
-VolleyImage est une application permettant de téléharger une image et de l'afficher dans une ImageView.
+VolleyImage est une application permettant de télécharger une image et de l'afficher dans une ImageView.
 - utilisation du framework Volley
 - Définition d'une boite de dialogue pendant le téléchargement de l'image
