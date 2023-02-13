@@ -87,4 +87,18 @@ TextView bienvenu;
     public void fermer(View v){
         finish();
     }
+    public void flappyBird(View v){
+        sendIntent("fb");
+    }
+    public void puissance4(View v){
+        sendIntent("p4");
+    }
+    public void doodleJump(View v){
+        sendIntent("dj");
+    }
+    public void sendIntent(String msg){
+        Intent i= new Intent(getApplicationContext(),Jeux.class);
+        i.putExtra("jeu",msg);
+        startActivity(i);
+    }
 }

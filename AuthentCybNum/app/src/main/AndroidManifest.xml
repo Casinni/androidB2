@@ -16,11 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuthentCybNum"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Jeux"
+            android:exported="false"
+            android:parentActivityName=".Accueil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vannes.lamy.authentcybnum.Accueil" />
+        </activity>
         <activity
             android:name=".Musique"
             android:exported="false"
-            android:parentActivityName="vannes.lamy.authentcybnum.Accueil">
+            android:parentActivityName=".Accueil">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="vannes.lamy.authentcybnum.Accueil" />
@@ -28,7 +35,7 @@
         <activity
             android:name=".Video"
             android:exported="false"
-            android:parentActivityName="vannes.lamy.authentcybnum.Accueil">
+            android:parentActivityName=".Accueil">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="vannes.lamy.authentcybnum.Accueil" />
